@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Todo Liste</title>
+</head>
+
+<body>
+    <h1>Todo List</h1>
+    <input type="radio" id="allgemein" name="tableView" value="Allgemein" checked>
+    <label for="allgemein">Allgemein</label><br>
+    <input type="radio" id="software" name="tableView" value="Software">
+    <label for="software">Software</label><br>
+    <input type="radio" id="hardware" name="tableView" value="Hardware">
+    <label for="hardware">Hardware</label>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Thema</th>
+                <th>Zusammnefassung</th>
+            </tr>
+        </thead>
+    </table>
+    <form>
+        <input type="text" name="ticketnummer" placeholder="enter ticket nummer">
+        <input type="text" name="thema" placeholder="enter topic">
+        <input type="text" name="description" placeholder="enter description">
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
