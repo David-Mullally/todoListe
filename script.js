@@ -1,22 +1,28 @@
 var table = document.getElementById('table');
+var ticketnummer = document.getElementById('ticketnummer');
+var thema = document.getElementById('thema');
+var zusammenfassung = document.getElementById('zusammenfassung');
 
 var currentTable = "allgemein";
 
 var tableContents = [
-    {
-        id: 216,
-        thema: "General",
-        zusammenfassung: "Blümen kaufen"
-    },
-    {
-        id: 516,
-        thema: "Technische",
-        zusammenfassung: "Updates Insatllieren",
-    }
 ];
 
-for (let i = 0 ; i < tableContents.length; i++){
-    table.innerHTML += `<tbody><tr><td>${tableContents[i].id}</td><td>${tableContents[i].thema}</td><td>${tableContents[i].zusammenfassung}</td></tr></tbody>`
+submitForm = () => {
+    let ticket = ticketnummer.value;
+    let the = thema.value;
+    let zf = zusammenfassung.value;
+    tableContents.push(
+        {
+            id: ticket,
+            thema: the,
+            zusammenfassung: zf
+        }
+    );
+    table.innerHTML += `<tr><td>${tableContents[tableContents.length - 1].id}</td><td>${tableContents[tableContents.length - 1].thema}</td><td>${tableContents[tableContents.length - 1].zusammenfassung}</td></tr>`
+    
+    ticketnummer.value = "";
+    thema.value = "";
+    zusammenfassung.value= "";
 };
-
 

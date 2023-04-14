@@ -17,7 +17,7 @@
     <label for="software">Software</label><br>
     <input type="radio" id="hardware" name="tableView" value="Hardware">
     <label for="hardware">Hardware</label>
-    <table id="table">
+    <table>
         <thead>
             <tr>
                 <th>ID</th>
@@ -25,11 +25,24 @@
                 <th>Zusammnefassung</th>
             </tr>
         </thead>
+        <tbody id="table">
+            <tr>
+                <td>213</td>
+                <td>Generel</td>
+                <td>Blümen kaufen</td>
+            </tr>
+            <tr>
+                <td>516</td>
+                <td>Technische</td>
+                <td>Updates Installieren</td>
+            </tr>
+        </tbody>
     </table>
     <form>
-        <input type="text" name="ticketnummer" placeholder="enter ticket nummer">
-        <input type="text" name="thema" placeholder="enter topic">
-        <input type="text" name="description" placeholder="enter description">
+        <input type="text" name="ticketnummer" id="ticketnummer" placeholder="enter ticket nummer">
+        <input type="text" name="thema" id="thema" placeholder="enter topic">
+        <input type="text" name="zusammenfassung" placeholder="enter description" id="zusammenfassung">
+        <input onclick="submitForm()" type="button" value="submit">
     </form>
     <script src="script.js"></script>
 </body>
